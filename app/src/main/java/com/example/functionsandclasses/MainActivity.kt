@@ -13,11 +13,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        test()
+        //test()
 
-        println(sum(5,9))
+        val op = Sum()
+        println(op.sum(5, 3))
+        println(op.div(20, 4))
 
+    }
 
+    class Sum:Div() {
+        fun sum(a: Int, b: Int): Int {
+            return a + b
+        }
+    }
+
+    open class Div {
+        fun div (a: Int,b: Int): Int {
+            return a / b
+        }
     }
 
     fun test() {
