@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         println(sum(5,9))
 
+        makeSimpson()
 
     }
 
@@ -28,6 +29,15 @@ class MainActivity : AppCompatActivity() {
 
     fun helloWorld(view: View) {
         textView.text = "Hello World!"
+    }
+
+    fun makeSimpson() {
+
+        val homer = Simpson("Homer", 50, "Nuclear Safety")
+
+        homer.age = 51
+        println(homer.age)
+
     }
 
 
